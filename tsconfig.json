@@ -1,0 +1,28 @@
+{
+    "include": [
+        "env.d.ts",
+        "src/**/*",
+        "src/**/*.ts",
+        "src/worker/worker.d.ts"
+    ],
+    "exclude": [
+        "src/**/__tests__/*"
+    ],
+    "compilerOptions": {
+        "composite": true,
+        "baseUrl": ".",
+        "module": "ESNext",
+        "moduleResolution":"node",
+        "lib": [
+            "ESNext",
+            "DOM",
+            "WebWorker",
+            "ScriptHost",
+        ],
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        }
+    }
+}

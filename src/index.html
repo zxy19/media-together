@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>媒体同步</title>
+  </head>
+  <body>
+    <div class="app">
+      <div id="loginTip" class="overlay">
+        <div class="overlay-content">
+          <h2>登录到媒体同步</h2>
+          <div class="form">
+            <div>
+              <label for="userName">用户名</label>
+              <input type="text" id="userName" class="ipt-style" />
+            </div>
+            <div>
+              <label for="roomId">房间号</label>
+              <input type="text" id="roomId" class="ipt-style" />
+            </div>
+            <button id="login" class="btn">进入媒体同步</button>
+          </div>
+        </div>
+      </div>
+      <div id="media-container"></div>
+      <div id="media-list" class="list-ctr">
+        <div class="list-title">播放列表</div>
+      </div>
+      <div id="history-list" class="list-ctr">
+        <div class="list-title">播放历史记录</div>
+      </div>
+      <div>
+        <label for="volume">音量</label>
+        <input id="volume" type="range" min="0" max="100" value="100" />
+        <select id="wideMode" class="showWide-i ipt-style" style="width: 100px">
+          <option value="left">控制居左</option>
+          <option value="right">控制居右</option>
+          <option value="none">不使用</option>
+        </select>
+        <button id="floatWindow" class="btn">启动浮窗</button>
+        <button id="skipCurrent" class="btn">跳过当前</button>
+      </div>
+      <div id="user-list"></div>
+
+      <div id="msg-box"></div>
+      <div id="tool-bar">
+        <button id="show-add-form" class="btn">点歌/获取媒体</button>
+      </div>
+      <div id="add-form" class="form">
+        <div>
+          <label for="add-form-name">名字</label>
+          <input
+            class="input-control ipt-style"
+            type="text"
+            id="add-form-name"
+            placeholder="歌曲名"
+          />
+        </div>
+        <div>
+          <label for="add-form-url">URL</label>
+          <input
+            class="input-control ipt-style"
+            type="text"
+            id="add-form-url"
+            placeholder="URL"
+          />
+        </div>
+        <div>
+          <label for="add-form-type">类型</label>
+          <select
+            class="input-control ipt-style"
+            id="add-form-type"
+            value="audio"
+          >
+            <option value="audio" selected>音乐</option>
+            <option value="video">视频</option>
+          </select>
+        </div>
+        <div>
+          <button id="add" class="btn">添加</button>
+          <button id="uploadFile" class="btn">上传文件</button>
+          <button id="tools" class="btn">工具</button>
+          <input type="file" id="file" style="display: none" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+.msg-item {
+  display: block;
+  transition: all 0.3s;
+  opacity: 1;
+}
+.msg-item.msg-hide {
+  opacity: 0;
+}
+.msg-item .msg-from {
+  font-weight: bold;
+  color: #2196f3;
+  padding-right: 5px;
+}
+.msg-item.msg-error .msg-from,
+.msg-item.msg-error .msg-body {
+  color: red;
+}
+.msg-item.msg-warning .msg-from {
+  color: orange;
+}
+.msg-item.msg-success .msg-from {
+  color: #43a047;
+}
+.msg-item.msg-debug .msg-from,
+.msg-item.msg-debug .msg-body {
+  color: #9e9e9e;
+}
+.msg-item .msg-from::before {
+  content: "[";
+}
+.msg-item .msg-from::after {
+  content: "]";
+}
